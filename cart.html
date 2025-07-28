@@ -154,8 +154,8 @@
         });
 
         // Mostrar totales
-        document.getElementById('cart-subtotal').textContent = `Bs.${ subtotal.toFixed(2) }`;
-        document.getElementById('cart-total').textContent = `Bs.${ subtotal.toFixed(2)}`;
+        document.getElementById('cart-subtotal').textContent = `Bs.${subtotal.toFixed(2)}`;
+        document.getElementById('cart-total').textContent = `Bs.${subtotal.toFixed(2)}`;
 
         function removeItem(index) {
             cartItems.splice(index, 1);
@@ -166,7 +166,6 @@
     </script>
 
     <script>
-       
 
         document.getElementById("checkout-btn").addEventListener("click", function () {
             const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -181,20 +180,23 @@
             cartItems.forEach(item => {
                 const subtotal = item.price * item.quantity;
                 total += subtotal;
-                mensaje += `🛍 * ${item.name}*\nTalla: ${item.size} \nCantidad: ${item.quantity} \nSubtotal: Bs.${subtotal.toFixed(2)} \n\n`;
+                mensaje += `🛍️ *${item.name}*\nTalla: ${item.size}\nColor: ${item.color}\nCantidad: ${item.quantity}\nSubtotal: Bs. ${subtotal.toFixed(2)}\n\n`;
             });
+
 
             mensaje += `🚚 *Envío:* Gratis\n💵 *Total:* *Bs. ${total.toFixed(2)}*`;
 
-            // Reemplaza este número con el tuyo, sin el signo "+"
             const telefono = "59173634686";
             const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
             window.open(url, "_blank");
+
+            localStorage.removeItem("cartItems");
+
         });
     </script>
 
-    <script src="productos.js"></script>
+
     <script src="script.js"></script>
 </body>
 
