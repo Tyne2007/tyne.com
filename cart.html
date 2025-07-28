@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYNE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="index.html"><img src="img/TYNE NEGRO.png" alt="logo" class="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="shop.html">Tienda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#tu_carrito</h2>
+        <p>Revisa y gestiona tus productos</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Eliminar</td>
+                    <td>Imagen</td>
+                    <td>Talla</td>
+                    <td>Producto</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+
+            <tbody id="cart-items">
+                <!-- Los productos se añadirán dinámicamente con JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Aplicar Cupón</h3>
+            <div>
+                <input type="text" placeholder="Ingresa tu cupón">
+                <button class="normal" id="apply-coupon">Aplicar</button>
+            </div>
+            <p id="coupon-message"></p>
+        </div>
+
+        <div id="subtotal">
+            <h3>Resumen del Carrito</h3>
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="cart-subtotal">Bs. 0</td>
+                </tr>
+                <tr>
+                    <td>Envio</td>
+                    <td id="shipping-cost">Gratis</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong id="cart-total">Bs. 0</strong></td>
+                </tr>
+            </table>
+            <button class="normal" id="checkout-btn">Proceder al Pago</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/TYNE BLANCO 50X50.png" alt="logo-2">
+            <h4>Contacto</h4>
+            <p><strong>Teléfono: </strong>73634686</p>
+            <p><strong>Horario: </strong>08:30 am - 17:30 pm, Lun-Vie</p>
+            <h4>Síguenos</h4>
+            <div class="icon">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@tyn3_?_t=ZM-8y3mXZQiaov&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/59173634686"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>Sobre Nosotros</h4>
+            <a href="#">Acerca de TYNE</a>
+            <a href="#">Información de Envío</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="contact.html">Contáctanos</a>
+        </div>
+
+        <div class="col">
+            <h4>Mi Cuenta</h4>
+            <a href="#">Iniciar Sesión</a>
+            <a href="cart.html">Ver Carrito</a>
+            <a href="#">Mi Lista de Deseos</a>
+            <a href="#">Seguir Mi Pedido</a>
+            <a href="#">Ayuda</a>
+        </div>
+
+        <div class="col install">
+            <p>Métodos de Pago Seguros</p>
+            <img src="img/pay.png" alt="Pago">
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 Santiago Garcia - TYNE</p>
+        </div>
+    </footer>
+
+    <script>
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const cartItemsContainer = document.getElementById('cart-items');
+        let subtotal = 0;
+
+        cartItemsContainer.innerHTML = ''; // limpiar por si acaso
+
+        cartItems.forEach((item, index) => {
+            const itemSubtotal = item.price * item.quantity;
+            subtotal += itemSubtotal;
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td><button onclick="removeItem(${index})" style="color: red;">✖</button></td>
+            <td><img src="${item.image}" style="width: 80px;" alt="${item.name}"></td>
+            <td>${item.size}</td>
+            <td>${item.name}</td>
+            <td>Bs. ${item.price.toFixed(2)}</td>
+            <td>${item.quantity}</td>
+            <td>Bs. ${itemSubtotal.toFixed(2)}</td>
+        `;
+            cartItemsContainer.appendChild(row);
+        });
+
+        // Mostrar totales
+        document.getElementById('cart-subtotal').textContent = `Bs.${ subtotal.toFixed(2) }`;
+        document.getElementById('cart-total').textContent = `Bs.${ subtotal.toFixed(2)}`;
+
+        function removeItem(index) {
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            location.reload(); // Recargar para ver cambios
+        }
+
+    </script>
+
+    <script>
+       
+
+        document.getElementById("checkout-btn").addEventListener("click", function () {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            if (cartItems.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+
+            let mensaje = "¡Hola! Este es mi pedido:\n\n";
+            let total = 0;
+
+            cartItems.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                mensaje += `🛍 * ${item.name}*\nTalla: ${item.size} \nCantidad: ${item.quantity} \nSubtotal: Bs.${subtotal.toFixed(2)} \n\n`;
+            });
+
+            mensaje += `🚚 *Envío:* Gratis\n💵 *Total:* *Bs. ${total.toFixed(2)}*`;
+
+            // Reemplaza este número con el tuyo, sin el signo "+"
+            const telefono = "59173634686";
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+            window.open(url, "_blank");
+        });
+    </script>
+
+    <script src="productos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
