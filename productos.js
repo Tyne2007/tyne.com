@@ -1,216 +1,327 @@
-// Base de productos
-const productos = [
-    {
-        id: "1",
-        name: "Polera Frank Ocean",
-        price: 120,
-        image: "img/Collection/Frank Ocean/T-Shirt Frank Ocean 1.png",
-        images: [
-            "a",
-            "img 2/1.png",
-            "img 2/1.png",
-            "a"
-        ],
-        description: "Diseño urbano en blanco y negro inspirado en Frank Ocean.",
-    },
-    {
-        id: "2",
-        name: "Polera Frank Ocean Blond",
-        price: 120,
-        image: "img/Collection/Frank Ocean/T-Shirt Frank Ocean 2.png",
-        images: [
-            "img/T-Shirt Frank Ocean 1.jpg",
-            "img/T-Shirt Frank Ocean 1.jpg",
-            "img/T-Shirt Frank Ocean 1.jpg",
-            "img/Collection/Frank Ocean/T-Shirt Frank Ocean 2.png"
-        ],
-        description: "Diseño elegante en tributo a la artista Sade.",
-    },
-    {
-        id: "3",
-        name: "Polera Gato SHIT",
-        price: 120,
-        image: "img/Poleras/T-Shirt Shit.png",
-        description: "Estilo provocador con diseño gráfico de gato #SHIT.",
-    },
-    {
-        id: "4",
-        name: "Polera Sade",
-        price: 120,
-        image: "img/Collection/Sade/T-Shirt Sade.png",
-        images: [
-            "img/T-Shirt Sade.jpg",
-            "img/T-Shirt Sade.jpg",
-            "img/T-Shirt Sade.jpg",
-            "img/T-Shirt Sade.jpg"
-        ],
-        description: "Diseño elegante en tributo a la artista Sade.",
-    },
-    {
-        id: "5",
-        name: "Polera Music",
-        price: 120,
-        image: "img/Poleras/T-Shirt Music.png",
-        description: "La musica hace conexiones en el alma."
-    },
-    {
-        id: "6",
-        name: "Polera Deftones",
-        price: 120,
-        image: "img/Collection/Deftones/T-Shirt Deftones.png",
-        images: [
-            "img/T-Shirt Deftones.jpg",
-            "img/T-Shirt Deftones.jpg",
-            "img/T-Shirt Sade.jpg",
-            "img/T-Shirt Sade.jpg"
-        ],
-        description: "Sextones.",
-    },
-    {
-        id: "7",
-        name: "Polera Gato",
-        price: 120,
-        image: "img/Poleras/T-Shirt Gato.png",
-        images: [
-            "img/T-Shirt Gato.jpg",
-            "img/T-Shirt Gato.jpg",
-            "img/T-Shirt Gato.jpg",
-            "img/T-Shirt Sade.jpg"
-        ],
-        description: "Sextones.",
-    },
-    {
-        id: "8",
-        name: "Donnie Darko",
-        price: 120,
-        image: "img/Poleras/T-Shirt Donnie Darko.png",
-        images: [
-            "img/T-Shirt Donnie Darko.jpg",
-            "img/T-Shirt Donnie Darko.jpg",
-            "img/T-Shirt Sade.jpg",
-            "img/T-Shirt Sade.jpg"
-        ],
-        description: "Sextones.",
-    },
-    {
-        id: "9",
-        name: "Vlone",
-        price: 120,
-        image: "img/Poleras/T-Shirt VLONE.png",
-        images: [
-            "img/T-Shirt Donnie Darko.jpg",
-            "img/T-Shirt Donnie Darko.jpg",
-            "img/T-Shirt Sade.jpg",
-            "img/T-Shirt Sade.jpg"
-        ],
-        description: "Sextones.",
-    },
-    {
-        id: "10",
-        name: "Polera Shh",
-        price: 120,
-        image: "img/Poleras/T-Shirt Shh.png",
-        images: [
-            "img/T-Shirt Shh 2.jpg",
-            "img/T-Shirt Donnie Darko.jpg",
-            "img/T-Shirt Sade.jpg",
-            "img/T-Shirt Shh.jpg"
-        ],
-        description: "Sextones.",
-    },
-    {
-        id: "11",
-        name: "Albúm / C.M.I.Y.G.L",
-        price: 120,
-        image: "img/Collection/Tyler the creator/3.png",
-        images: [
-            "img/Collection/Tyler the creator/5.png",
-            "img/Collection/Tyler the creator/3.png",
-            "img/Collection/Tyler the creator/3.png",
-            "img/Collection/Tyler the creator/3.png"
-        ],
-        description: "Sextones.",
-    },
+<!DOCTYPE html>
+<html lang="es">
 
-    {
-        id: "12",
-        name: "Tyler The Creator",
-        price: 120,
-        colors: ["Negra", "Blanca"], // Podés usar esto si querés usar <select>
-        image: "img/Collection/Tyler the creator/4.png",
-        images: [
-            { src: "img/Collection/Tyler the creator/2.png", color: "Negra" },
-            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
-            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
-            { src: "img/Collection/Tyler the creator/4.png", color: "Negra" }
-        ],
-        description: "Sextones."
-    },
+<head>
 
-    {
-        id: "13",
-        name: "Drake",
-        price: 120,
-        colors: ["Negra", "Blanca"],
-        image: "img/Collection/Drake/T-Shirt Drake 1 W.png",
-        images: [
-            { src: "img/Collection/Drake/T-Shirt Drake 1 B.png", color: "Negra"},
-            { src: "img/Collection/Drake/T-Shirt Drake 1 W.png", color: "Blanca"},
-            { src: "img/Collection/Drake/T-Shirt Drake 1 W.png", color: "Blanca"},
-            { src: "img/Collection/Drake/T-Shirt Drake 1 W.png", color: "Blanca"}
-        ],
-        description: "Sextones.",
-    }
-];
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYNE</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
-
-
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
-const producto = productos.find(p => p.id === id);
-
-if (producto) {
-    // Mostrar datos principales
-    document.getElementById("MainImg").src = producto.image;
-    document.getElementById("product-name").textContent = producto.name;
-    document.getElementById("product-price").textContent = `Bs. ${producto.price}`;
-    document.getElementById("product-description").textContent = producto.description;
-
-    // Insertar miniaturas dinámicamente
-    const smallImgContainer = document.getElementById("smallImgGroup");
-    smallImgContainer.innerHTML = '';
-
-    producto.images.forEach((imgData, index) => {
-        const div = document.createElement('div');
-        div.classList.add('small-img-col');
-
-        const img = document.createElement('img');
-        img.src = imgData.src;
-        img.alt = `Miniatura ${index + 1}`;
-        img.classList.add('small-img');
-        img.style.width = "100%";
-        img.dataset.color = imgData.color; // <--- GUARDAMOS EL COLOR
-
-        div.appendChild(img);
-        smallImgContainer.appendChild(div);
-
-        img.addEventListener('click', () => {
-            document.getElementById("MainImg").src = imgData.src;
-            localStorage.setItem("selectedColor", imgData.color); // <--- GUARDAMOS COLOR SELECCIONADO
-        });
-    });
-
-    // Guardar color por defecto (de la imagen principal)
-    if (producto.images[0] && producto.images[0].color) {
-        localStorage.setItem("selectedColor", producto.images[0].color);
-    }
-
-} else {
-    document.getElementById("product-name").textContent = "Producto no encontrado";
-    document.getElementById("MainImg").src = "img/default.jpg";
-}
+    <meta name="description"
+        content="Ropa urbana en Bolivia - TYNE. Descubre poleras únicas inspiradas en la cultura actual. Envíos a todo el país.">
+    <meta name="keywords" content="ropa urbana, bolivia, tyne, moda, poleras frank ocean, tienda online, streetwear">
+    <meta name="author" content="Santiago Garcia">
+    <link rel="canonical" href="https://tyne.com.bo/"> <!-- tu dominio real -->
+    <link rel="icon" href="img/TYNE NEGRO 10x10.png" type="image/png">
+    <meta property="og:title" content="TYNE - Ropa Urbana Boliviana" />
+    <meta property="og:description" content="Tienda de moda urbana. Poleras únicas. Envíos a todo el país." />
+    <meta property="og:image" content="https://tyne.com.bo/img/img/TYNE NEGRO.png" />
+    <meta property="og:url" content="https://tyne.com.bo/" />
 
 
 
 
+    <link rel="stylesheet" href="style.css">
 
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="index.html"><img src="img/TYNE NEGRO.png" class="logo" alt="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a href="shop.html">Tienda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-counter">0</span>
+                    </a></li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"><span id="mobile-cart-counter">0</span></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>Tu estilo empieza acá</h4>
+        <h2>Vestite sin reglas</h2>
+        <h1>Ropa que se siente como vos</h1>
+        <p>Más que moda, identidad</p>
+        <a href="#product1"><button>Shop now</button></a>
+    </section>
+
+    <!-- Seccion de producto 1 -->
+
+    <section id="product1" class="section-p1">
+        <h2>Esto es TYNE</h2>
+        <p>Inspirado por la música, hecho para el movimiento.</p>
+
+        <div class="pro-container">
+            <!-- producto 1 -->
+             <div class="pro">
+                <a href="sproduct.html?id=13"><img src="img/Collection/Drake/T-Shirt Drake 1 W.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Drake</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- producto 2 -->
+            <div class="pro">
+                <a href="sproduct.html?id=12"><img src="img/Collection/Tyler the creator/4.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Tyler The Creator</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- producto 3 -->
+            <div class="pro">
+                <a href="sproduct.html?id=10"><img src="img/Poleras/T-Shirt Shh.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Shhh</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+                <a href="sproduct.html?id=11"><img src="img/Collection/Tyler the creator/3.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Tyler The Creator</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <a href="sproduct.html?id=4"><img src="img/Collection/Sade/T-Shirt Sade.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Sade</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <a href="sproduct.html?id=9"><img src="img/Poleras/T-Shirt VLONE.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Vlone</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <a href="sproduct.html?id=1"><img src="img/Collection/Frank Ocean/T-Shirt Frank Ocean 1.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Frank Ocean</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <a href="sproduct.html?id=3"><img src="img/Poleras/T-Shirt Shit.png" alt=""></a>
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="banner" class="section-m1">
+        <h4>#TylerTheCreator</h4>
+        <h2>Ver <span>TODA LA</span> colleccion</h2>
+        <a href="tyler.html"><button class="normal">Aqui</button></a>
+    </section>
+
+    <!-- Seccion de producto 2 -->
+
+    <section id="product1" class="section-p1">
+        <h2>featured Products</h2>
+        <p>Summer Collection New Morden Design</p>
+
+        <div class="pro-container">
+            <!-- producto 1 -->
+            <div class="pro">
+                <a href="sproduct.html?id=7"><img src="img/Poleras/T-Shirt Gato.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Gato</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- producto 2 -->
+            <div class="pro">
+                <a href="sproduct.html?id=6"><img src="img/Collection/Deftones/T-Shirt Deftones.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Deftones</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- producto 3 -->
+            <div class="pro">
+                <a href="sproduct.html?id=8"><img src="img/Poleras/T-Shirt Donnie Darko.png" alt=""></a>
+                <div class="des">
+                    <span>TYNE</span>
+                    <h5>Donnie Darko</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- producto 4 -->
+            <div class="pro">
+                <a href="sproduct.html?id=5"><img src="img/Poleras/T-Shirt Music.png" alt=""></a>
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Cartoon</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Bs. 120</h4>
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/TYNE BLANCO 50X50.png" alt="logo-2">
+            <h4>Contacto</h4>
+            <p><strong>Teléfono: </strong>73634686</p>
+            <p><strong>Horario: </strong>08:30 am - 17:30 pm, Lun-Vie</p>
+            <h4>Síguenos</h4>
+            <div class="icon">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com/@tyne-w2l?si=zUFlWCCmxEqz7apC"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/tyne_e?igsh=MW4wcncxbWYwYjNvag=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@tyn3_?_t=ZM-8y3mXZQiaov&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/59173634686"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>Sobre Nosotros</h4>
+            <a href="#">Acerca de TYNE</a>
+            <a href="#">Información de Envío</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="contact.html">Contáctanos</a>
+        </div>
+
+        <div class="col">
+            <h4>Mi Cuenta</h4>
+            <a href="#">Iniciar Sesión</a>
+            <a href="cart.html">Ver Carrito</a>
+            <a href="#">Mi Lista de Deseos</a>
+            <a href="#">Seguir Mi Pedido</a>
+            <a href="#">Ayuda</a>
+        </div>
+
+        <div class="col install">
+            <p>Métodos de Pago Seguros</p>
+            <img src="img/pay.png" alt="Pago">
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 Santiago Garcia - TYNE</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/8d7609c3b6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
