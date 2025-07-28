@@ -59,6 +59,9 @@
         </div>
     </section>
 
+    
+
+
     <section id="product1" class="section-p1">
         <h2>Otros Productos</h2>
         <p>Summer Collection New Morden Design</p>
@@ -82,7 +85,8 @@
             </div>
             <!-- producto 2 -->
             <div class="pro">
-                <a href="sproduct.html?id=2"><img src="img/Collection/Frank Ocean/T-Shirt Frank Ocean 2.png" alt="Frank Ocean Blond"></a>
+                <a href="sproduct.html?id=2"><img src="img/Collection/Frank Ocean/T-Shirt Frank Ocean 2.png"
+                        alt="Frank Ocean Blond"></a>
                 <div class="des">
                     <span>TYNE</span>
                     <h5>Polera Frank Ocean Blond</h5>
@@ -98,7 +102,8 @@
             </div>
             <!-- producto 3 -->
             <div class="pro">
-                <a href="sproduct.html?id=1"><img src="img/Collection/Frank Ocean/T-Shirt Frank Ocean 1.png" alt="Frank Ocean"></a>
+                <a href="sproduct.html?id=1"><img src="img/Collection/Frank Ocean/T-Shirt Frank Ocean 1.png"
+                        alt="Frank Ocean"></a>
                 <div class="des">
                     <span>Adidas</span>
                     <h5>Cartoon</h5>
@@ -131,7 +136,7 @@
         </div>
     </section>
 
-    
+
 
     <footer class="section-p1">
         <div class="col">
@@ -177,9 +182,9 @@
     </footer>
 
     <script>
-        
-        
-        
+
+
+
 
 
         // Cambio de imagen al hacer clic en miniaturas
@@ -200,12 +205,15 @@
         document.querySelector('.normal').addEventListener('click', function () {
             // Obtener datos del producto
             const product = {
-                id: 1, // ID único del producto
-                name: "Men's Fashion T Shirt",
-                price: 120,
+                id: producto.id,
+                name: producto.name,
+                price: producto.price,
                 quantity: parseInt(document.querySelector('input[type="number"]').value),
-                image: "img/T-Shirt Frank Ocean 1.jpg"
+                size: document.querySelector('select').value,
+                color: document.getElementById("color-select")?.value || "No especificado",
+                image: producto.image
             };
+
 
             // Guardar en localStorage
             let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
