@@ -122,14 +122,15 @@ const productos = [
         id: "11",
         name: "Albúm / C.M.I.Y.G.L",
         price: 120,
+        colors: ["Negra", "Blanca"], // Podés usar esto si querés usar <select>
         image: "img/Collection/Tyler the creator/3.png",
         images: [
-            "img/Collection/Tyler the creator/5.png",
-            "img/Collection/Tyler the creator/3.png",
-            "img/Collection/Tyler the creator/3.png",
-            "img/Collection/Tyler the creator/3.png"
+            { src: "img/Collection/Tyler the creator/5.png", color: "Negra" },
+            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
+            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
+            { src: "img/Collection/Tyler the creator/3.png", color: "Negra" }
         ],
-        description: "Sextones.",
+        description: "Sextones."
     },
 
     {
@@ -140,8 +141,8 @@ const productos = [
         image: "img/Collection/Tyler the creator/4.png",
         images: [
             { src: "img/Collection/Tyler the creator/2.png", color: "Negra" },
-            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
-            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
+            { src: "img/Collection/Tyler the creator/4.png", color: "Blanca" },
+            { src: "img/Collection/Tyler the creator/4.png", color: "Blanca" },
             { src: "img/Collection/Tyler the creator/4.png", color: "Negra" }
         ],
         description: "Sextones."
@@ -160,7 +161,22 @@ const productos = [
             { src: "img/Collection/Drake/T-Shirt Drake 1 W.png", color: "Blanca"}
         ],
         description: "Sextones.",
-    }
+    },
+
+    {
+        id: "14",
+        name: "Really me",
+        price: 120,
+        colors: ["Negra", "Blanca"], // Podés usar esto si querés usar <select>
+        image: "img/Collection/Tyler the creator/4.png",
+        images: [
+            { src: "img/Collection/Tyler the creator/2.png", color: "Negra" },
+            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
+            { src: "img/Collection/Tyler the creator/3.png", color: "Blanca" },
+            { src: "img/Collection/Tyler the creator/4.png", color: "Negra" }
+        ],
+        description: "Sextones."
+    },
 ];
 
 
